@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Bolumler> 
+
+@{
+    ViewData["Title"] = "Bolumler Index";
+}
+
+<h1>Bolumler</h1>
+<p>Bu sayfa Bolumler Index sayfasıdır.</p>
+<table class="Bolumler_tablosu" style="width:100%">
+
+    <thead>
+        <tr>
+            <th>
+                Bolum Id
+            </th>
+            <th>
+                Bolum Adı
+            </th>
+        </tr>
+    </thead>
+
+<tbody>
+    @foreach(var Bolumler in Model)
+    {
+        <tr >
+
+                <th width="50%">
+                   @Bolumler.Bolum_ID
+                </th>
+
+                    
+            <th width="50%">
+             @Bolumler.Bolum_ADI
+            </th>
+
+                
+        </tr>
+
+    }
+
+
+</tbody>
+
+
+</table>
+
+
